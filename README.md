@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🌿 Smart Harvest
 
 Agricultural platform for farmers, buyers, and agriculture officers in Sri Lanka.
@@ -153,3 +154,7 @@ For web Google Sign-In, ensure `localhost` is added to your Firebase Console:
 - `backend/.env`
 
 Both are listed in `.gitignore`.
+=======
+# SDGP_SmartHarvest
+SmartHarvest is a Flutter-based mobile app that connects farmers, buyers, and agriculture officers. It provides crop listings, real-time market prices, weather updates, secure messaging, and notifications. The app uses Firebase, MongoDB, and a Flask REST API to improve agricultural trade and communication
+>>>>>>> c0644f7cd926db6cb5f0b42111f9f43c23337fdb

@@ -1,160 +1,114 @@
-<<<<<<< HEAD
-# 🌿 Smart Harvest
+# 🌾 Smart Harvest
 
-Agricultural platform for farmers, buyers, and agriculture officers in Sri Lanka.
+## 📖 Overview
 
-**Stack:** Flutter (Web · iOS · Android) + Flask (Python) backend + Firebase
+Smart Harvest is a full-stack agricultural platform developed to support farmers, buyers, and agriculture officers across Sri Lanka. The application provides a digital marketplace where farmers can showcase their crops, buyers can connect directly with producers, and agriculture officers can share important information and guidance.
 
----
-
-## Project Structure
-
-```
-Smart-Harvest-main/
-├── backend/          ← Flask API server (Python)
-└── frontend/         ← Flutter app (Web, iOS, Android)
-```
+Built using **Flutter**, **Flask**, and **Firebase**, the platform delivers a modern cross-platform experience for web, Android, and iOS while offering secure authentication, real-time communication, weather information, and agricultural services.
 
 ---
 
-## Backend Setup
+## 🎯 Project Objective
 
-### 1. Get your Firebase Service Account Key
-1. Go to [Firebase Console](https://console.firebase.google.com) → your project
-2. ⚙️ Project Settings → **Service accounts** tab
-3. Click **"Generate new private key"** → save the downloaded `.json` file
-4. Place it at: `backend/serviceAccountKey.json`
+The main objective of Smart Harvest is to simplify agricultural trade and improve communication between farmers, buyers, and agriculture officers through a single digital platform.
 
-### 2. Configure environment
-```bash
-cd backend
-cp .env.example .env
-# Edit .env — fill in SECRET_KEY and OPENWEATHER_API_KEY
-```
+The application aims to:
 
-### 3. Install & run
-```bash
-cd backend
-python -m venv venv
-venv\Scripts\activate        # Windows
-# source venv/bin/activate   # macOS/Linux
-
-pip install -r requirements.txt
-python app.py
-# ✅ Running on http://localhost:5000
-```
+* Connect farmers with potential buyers.
+* Provide real-time crop market information.
+* Deliver weather updates for better farming decisions.
+* Enable secure communication between users.
+* Support agricultural officers in sharing advice and announcements.
 
 ---
 
-## Frontend Setup
+## ✨ Features
 
-### Prerequisites
-- Flutter SDK ≥ 3.0.0  →  https://flutter.dev/docs/get-started/install
-- Chrome (for web), Android Studio (for Android), Xcode (for iOS)
+### 🌱 Crop Marketplace
 
-### Install dependencies
-```bash
-cd frontend
-flutter pub get
-```
+Farmers can publish crop listings with details such as product information, quantity, pricing, and availability, allowing buyers to easily discover fresh produce.
 
----
+### 🛒 Buyer & Farmer Connection
 
-## Running the App
+Buyers can browse available crops, contact farmers, and manage purchases through a simple and user-friendly interface.
 
-### 🌐 Web
-```bash
-cd frontend
-flutter run -d chrome
-```
-Backend URL auto-resolves to `http://localhost:5000`.
+### ☀️ Weather Updates
 
-### 📱 Android (emulator or device)
-```bash
-flutter run -d android
-```
-Backend URL auto-resolves to `http://10.0.2.2:5000` (emulator loopback to host).
+The platform provides current weather information to help farmers make informed decisions about planting, harvesting, and daily farming activities.
 
-For a **real Android device** on the same WiFi network:
-```bash
-flutter run -d android --dart-define=API_BASE_URL=http://YOUR_LOCAL_IP:5000
-```
+### 💬 Secure Messaging
 
-### 🍎 iOS (simulator or device)
-```bash
-flutter run -d ios
-```
-Backend URL auto-resolves to `http://localhost:5000`.
+Users can communicate directly through an integrated messaging system, making it easier to discuss products, prices, and transactions.
 
-For a **real iOS device**:
-```bash
-flutter run -d ios --dart-define=API_BASE_URL=http://YOUR_LOCAL_IP:5000
-```
+### 🔔 Notifications
+
+Receive important notifications including new messages, marketplace updates, and agricultural announcements.
+
+### 🔐 User Authentication
+
+Firebase Authentication provides secure sign-in and registration using email and password, with Google Sign-In support where available.
+
+### 📊 Real-Time Data
+
+Firebase Firestore keeps application data synchronized, ensuring users always have access to the latest information.
 
 ---
 
-## Building for Production
+## 💻 Technologies Used
 
-### Web
-```bash
-flutter build web --release
-# Output: frontend/build/web/
-# Deploy to Firebase Hosting, Netlify, Vercel, etc.
-```
+### Frontend
 
-### Android APK
-```bash
-flutter build apk --release
-# Output: frontend/build/app/outputs/flutter-apk/app-release.apk
-```
+* Flutter
+* Dart
 
-### Android App Bundle (Play Store)
-```bash
-flutter build appbundle --release
-```
+### Backend
 
-### iOS (requires macOS + Xcode)
-```bash
-flutter build ios --release
-```
+* Flask
+* Python
+* REST API
+
+### Database & Cloud Services
+
+* Firebase Authentication
+* Cloud Firestore
+* Firebase Cloud Messaging
+
+### APIs
+
+* OpenWeather API
 
 ---
 
-## Firebase Configuration
+## 📚 What I Learned
 
-The app uses Firebase for:
-- **Authentication** (email/password + Google Sign-In)
-- **Firestore** (real-time database)
-- **Cloud Messaging** (push notifications — mobile only by default)
+This project helped me gain practical experience in:
 
-Firebase options are pre-configured in `frontend/lib/firebase_options.dart`.
-
-For web Google Sign-In, ensure `localhost` is added to your Firebase Console:
-> Authentication → Sign-in method → Google → Authorised domains → Add `localhost`
-
----
-
-## Environment Variables
-
-| Variable | Where | Purpose |
-|---|---|---|
-| `FIREBASE_CREDENTIALS` | `backend/.env` | Path to `serviceAccountKey.json` |
-| `FIREBASE_PROJECT_ID` | `backend/.env` | Firebase project ID |
-| `OPENWEATHER_API_KEY` | `backend/.env` | OpenWeatherMap API key |
-| `SECRET_KEY` | `backend/.env` | Flask secret key |
-| `API_BASE_URL` | Flutter `--dart-define` | Override backend URL (real devices) |
-| `VAPID_KEY` | Flutter `--dart-define` | Firebase web push VAPID key (optional) |
+* Developing cross-platform applications using Flutter.
+* Building RESTful APIs with Flask.
+* Integrating Firebase Authentication and Firestore.
+* Managing real-time data synchronization.
+* Implementing push notifications.
+* Connecting frontend and backend services.
+* Working with external APIs for weather information.
+* Designing applications using a clean and scalable architecture.
 
 ---
 
-## Security
+## 🚀 Future Improvements
 
-⚠️ **Never commit these files:**
-- `backend/serviceAccountKey.json`
-- `backend/.env`
+Future versions of Smart Harvest could include:
 
-Both are listed in `.gitignore`.
-=======
-# SDGP_SmartHarvest
-SmartHarvest is a Flutter-based mobile app that connects farmers, buyers, and agriculture officers. It provides crop listings, real-time market prices, weather updates, secure messaging, and notifications. The app uses Firebase, MongoDB, and a Flask REST API to improve agricultural trade and communication
->>>>>>> c0644f7cd926db6cb5f0b42111f9f43c23337fdb
+* Online payment integration.
+* AI-based crop disease detection.
+* Crop price prediction using analytics.
+* Multi-language support.
+* Advanced search and filtering.
+* Order tracking and delivery management.
+* Farmer ratings and reviews.
+
+---
+
+## ✅ Conclusion
+
+Smart Harvest is a modern agricultural platform that brings together farmers, buyers, and agriculture officers in one ecosystem. By combining Flutter, Flask, Firebase, and weather services, the application improves agricultural communication, simplifies crop trading, and supports smarter farming through accessible digital technology.
+

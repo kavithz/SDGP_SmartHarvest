@@ -1,4 +1,4 @@
-# SmartHarvest
+# 🌾 SmartHarvest
 
 SmartHarvest is a full-stack agricultural platform built to support farmers, buyers, and agriculture officers across Sri Lanka. It provides a digital marketplace where farmers can list their crops, buyers can connect directly with producers, and agriculture officers can share guidance and updates.
 
@@ -146,3 +146,13 @@ Before pushing to a public repository, make sure the following are **not** commi
 - Flutter build output (`build/`, `.dart_tool/`)
 
 These are already excluded via `.gitignore`, but always double-check before pushing.
+
+## Future Improvements
+
+- Improve market price forecasting accuracy
+- Add AI-based crop recommendations
+- Expand notification features
+- Add more detailed farmer analytics
+- Add online payment integration
+- Add order tracking and delivery management
+- Add farmer ratings and reviews

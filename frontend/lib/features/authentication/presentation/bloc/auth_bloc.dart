@@ -77,10 +77,10 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
   // ── OTP Step 1: Send ───────────────────────────────────────────────────────
   // Uses ApiClient.instance.post() — base URL is resolved dynamically:
-  //   Web            → http://localhost:5000
-  //   Android emu    → http://10.0.2.2:5000
-  //   iOS sim        → http://localhost:5000
-  //   Real device    → --dart-define=API_BASE_URL=http://YOUR_IP:5000
+  //   Web            → http://localhost:5001
+  //   Android emu    → http://10.0.2.2:5001
+  //   iOS sim        → http://localhost:5001
+  //   Real device    → --dart-define=API_BASE_URL=http://YOUR_IP:5001
   Future<void> _onSendOtp(SendOtpEvent event, Emitter<AuthState> emit) async {
     emit(const AuthLoading());
     try {

@@ -7,21 +7,21 @@ class ApiConstants {
   ApiConstants._();
 
   /// Base URL resolved automatically per platform:
-  ///   Web browser        → http://localhost:5000
-  ///   Android emulator   → http://10.0.2.2:5000  (loopback alias to host)
-  ///   iOS simulator      → http://localhost:5000
-  ///   Real device        → set --dart-define=API_BASE_URL=http://YOUR_IP:5000
+  ///   Web browser        → http://localhost:5001
+  ///   Android emulator   → http://10.0.2.2:5001  (loopback alias to host)
+  ///   iOS simulator      → http://localhost:5001
+  ///   Real device        → set --dart-define=API_BASE_URL=http://YOUR_IP:5001
   static String get baseUrl {
     const envUrl = String.fromEnvironment('API_BASE_URL', defaultValue: '');
     if (envUrl.isNotEmpty) return envUrl;
 
-    if (kIsWeb) return 'http://localhost:5000';
+    if (kIsWeb) return 'http://localhost:5001';
 
     if (defaultTargetPlatform == TargetPlatform.android) {
-      return 'http://10.0.2.2:5000';
+      return 'http://10.0.2.2:5001';
     }
 
-    return 'http://localhost:5000';
+    return 'http://localhost:5001';
   }
 
   static const Duration timeout = Duration(seconds: 8);

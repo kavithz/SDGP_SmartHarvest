@@ -1,4 +1,4 @@
-# 🌾 SmartHarvest
+# SmartHarvest
 
 SmartHarvest is a full-stack agricultural platform built to support farmers, buyers, and agriculture officers across Sri Lanka. It provides a digital marketplace where farmers can list their crops, buyers can connect directly with producers, and agriculture officers can share guidance and updates.
 

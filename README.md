@@ -149,10 +149,15 @@ These are already excluded via `.gitignore`, but always double-check before push
 
 ## Future Improvements
 
-- Improve market price forecasting accuracy
-- Add AI-based crop recommendations
-- Expand notification features
-- Add more detailed farmer analytics
+- Improve market price forecasting accuracy with larger and more reliable datasets
+- Add AI-based crop recommendations based on crop type, location, weather, and market conditions
+- Improve weather-based farming recommendations
+- Expand push notifications for important market, weather, and crop updates
+- Add detailed dashboards for farmers, buyers, and agriculture officers
+- Improve marketplace search and filtering
 - Add online payment integration
 - Add order tracking and delivery management
 - Add farmer ratings and reviews
+- Add more agricultural resources and educational content
+- Improve multilingual support for Sinhala and Tamil users
+- Add offline support for important farming information
